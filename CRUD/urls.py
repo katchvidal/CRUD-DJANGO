@@ -18,7 +18,7 @@ from django.urls import path, include
 from .views import PersonaList, PersonaCreate, PersonaUpdate, PersonaDelete
 
 urlpatterns = [
-    path('read', PersonaList.as_view(), name = 'read'),
+    path('', PersonaList.as_view(), name = 'read'),
     path('create', PersonaCreate.as_view(), name = 'create' ),
     path('update/<int:pk>/', PersonaUpdate.as_view(), name = 'update'),
     path('delete/<int:pk>/', PersonaDelete.as_view(), name = 'delete'),
