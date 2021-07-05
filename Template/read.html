@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block title %} Leer{% endblock title %}
+
+
+{% block content %}
+
+    <h1> Pagina de Lectura (R) del CRUD
+    <br>
+    <br>
+    {% for query in querys %}
+
+        <p>{{query.nombre}} </p>
+        <p>{{query.apellido}} </p>
+        <p>{{query.correo}} </p>
+        <a href="  {% url 'update' query.id %} "> Actualizar</a>
+        <a href="  {% url 'delete' query.id %} "> Eliminar</a>
+        <hr>
+
+    {% endfor %}
+
+{% endblock content %}
+
+

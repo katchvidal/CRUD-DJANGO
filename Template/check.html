@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+    <form method= "POST">
+    {% csrf_token %}
+        <h1> Desea Eliminar a {{object}}
+        <button type="submit">Confirmar</button>
+        <a href=" {% url 'read' %} "> Cancelar</a>
+    </form>
+{% endblock content %}
