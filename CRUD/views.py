@@ -75,5 +75,5 @@ class PersonaUpdate(UpdateView):
 
 class PersonaDelete(DeleteView):
     model   =   Persona
-    template_name = 'Check.html'
+    template_name = 'check.html'
     success_url = reverse_lazy('read')
